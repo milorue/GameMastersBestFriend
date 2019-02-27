@@ -6,3 +6,5 @@ Whenever I run a session, or even plan one, I find I have at least 10 to 20 tabs
 
 *Diagrams:*
 
+*Scenarios & Narratives:*https://docs.google.com/document/d/1HQRboQaPnMcMSHqckXcjPDSVZPXUHg9c-r6FxRPCDr4/edit?usp=sharing
+
