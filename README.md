@@ -16,7 +16,7 @@ A comprehensive Dungeons and Dragons Campaign Manager that handles character cre
 
 *Class Diagram:* https://drive.google.com/file/d/1BV7nm6X28oAgr3HGhGmRh1HcXUHqUXiQ/view?usp=sharing
 
-*Sequence Diagram:* https://drive.google.com/file/d/1VusR0SC55O9HhjQNfJtfHibwfLostims/view?usp=sharing
+*Sequence Diagram:* https://drive.google.com/file/d/1R1T3ggKUUyEqer7l3X5cBA7DZ39nCbXO/view?usp=sharing
 
 *Scenarios & Narratives:* https://docs.google.com/document/d/1HQRboQaPnMcMSHqckXcjPDSVZPXUHg9c-r6FxRPCDr4/edit?usp=sharing
 
