@@ -6,9 +6,6 @@ Whenever I run a session, or even plan one, I find I have at least 10 to 20 tabs
 *Developer Description of what to Build"*
 A comprehensive Dungeons and Dragons Campaign Manager that handles character creation and game setup to in depth campaign customization and control over every aspect of running a D&D Campaign from the Dungeon Master's perspective. 
 
-*Use Cases
-
-
 **Diagrams & Documents:**
 
 
@@ -23,7 +20,7 @@ A comprehensive Dungeons and Dragons Campaign Manager that handles character cre
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/ithaca-comp-345/Game_Masters_Friend.svg?columns=all)](https://waffle.io/ithaca-comp-345/Game_Masters_Friend)
 
 ## Break-Down of Work:
-### Milo
+### Character & Items Work
 * [ ] Character Creation Epic
   * [ ] Stat breakdown & rolls
   * [ ] Create Character object
@@ -44,16 +41,20 @@ A comprehensive Dungeons and Dragons Campaign Manager that handles character cre
   * [ ] Image upload
   * [ ] Image download
 
-### Tea
+### Campaign Work
 
-### Cristian
+### Notes & Sharing Work
 
-### Mailey
+### Maps/Locations Work
 
-### Lee
+### Encounters Work
+
+### Player View Work
+
+### Game Master View Work
 
 
-## Progress
+## Old Progress Task List
 ### Use Cases
 * [ ] Character Creation & Stats Input
 * [ ] Campaign Creation & Editing
