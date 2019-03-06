@@ -20,6 +20,39 @@ A comprehensive Dungeons and Dragons Campaign Manager that handles character cre
 
 *Scenarios & Narratives:* https://docs.google.com/document/d/1HQRboQaPnMcMSHqckXcjPDSVZPXUHg9c-r6FxRPCDr4/edit?usp=sharing
 
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/ithaca-comp-345/Game_Masters_Friend.svg?columns=all)](https://waffle.io/ithaca-comp-345/Game_Masters_Friend)
+
+## Break-Down of Work:
+### Milo
+* [ ] Character Creation Epic
+  * [ ] Stat breakdown & rolls
+  * [ ] Create Character object
+    * [ ] Create Player object
+      * [ ] Player Classes
+      * [ ] Player Races
+    * [ ] Create NPC object
+      * [ ] Static actor
+      * [ ] Friendly actor
+      * [ ] Enemy actor
+      * [ ] Boss actor
+    * [ ] Character API
+    * [ ] Character UI
+    
+* [ ] Item Creation Epic
+  * [ ] Create Item object
+  * [ ] Item Creation UI
+  * [ ] Image upload
+  * [ ] Image download
+
+### Tea
+
+### Cristian
+
+### Mailey
+
+### Lee
+
+
 ## Progress
 ### Use Cases
 * [ ] Character Creation & Stats Input
