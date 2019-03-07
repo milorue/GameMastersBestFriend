@@ -41,7 +41,22 @@ A comprehensive Dungeons and Dragons Campaign Manager that handles character cre
   * [ ] Image upload
   * [ ] Image download
 
-### Campaign Work
+### Accounts & Campaign Work
+* [ ] Accounts creation epic
+  * [ ]  Create account for Game Master
+  * [ ]  Create account for Player
+  * [ ]  PlayerUI
+  * [ ]  PlayerAPI
+  * [ ]  GameMasterUI
+  * [ ]  GameMasterAPI
+  
+  
+* [ ] campaign work
+    * [ ] add/edit and store notes 
+    * [ ] add player to campaign
+    * [ ] share notes with players
+    * [ ] share map/locations
+    * [ ] store map/locations
 
 ### Notes & Sharing Work
 
