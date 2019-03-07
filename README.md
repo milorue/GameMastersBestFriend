@@ -19,6 +19,8 @@ A comprehensive Dungeons and Dragons Campaign Manager that handles character cre
 
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/ithaca-comp-345/Game_Masters_Friend.svg?columns=all)](https://waffle.io/ithaca-comp-345/Game_Masters_Friend)
 
+*Sprint Goal:* "The goal is be able to create and log in to an account and create characters to be stored within an account. Any account should be able to create a blank campaign and invite players to it and show notes about the campaign with them.
+
 ## Break-Down of Work:
 ### Character & Items Work
 * [ ] Character Creation Epic
