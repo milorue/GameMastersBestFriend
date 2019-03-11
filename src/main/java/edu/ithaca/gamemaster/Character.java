@@ -22,6 +22,12 @@ public class Character {
                      String languages[], Action actions[]){
         this.name = name;
         this.hitPts=startingHP;
+        if(initialStrength > 20 || initialDexterity > 20 || initialConstitution > 20 || initialIntelligence > 20
+                || initialWisdom > 20 || initialCharisma > 20 || initialStrength < 0
+                || initialDexterity < 0 || initialConstitution < 0 || initialIntelligence < 0 || initialWisdom < 0 || initialCharisma < 0
+                || initialSpeed < 0 || initialArmor < 0){
+            throw new IndexOutOfBoundsException("Modifiers can only be less than 20 and greater than 0");
+        }
         this.strength=initialStrength;
         this.dexterity=initialDexterity;
         this.constitution=initialConstitution;
@@ -37,6 +43,31 @@ public class Character {
 
     public void setHP(int startingHP){
         this.hitPts=startingHP;
+    }
+    public void setName(String newName){this.name=newName;}
+    public void setStrength(int newStrength){this.strength=newStrength;}
+    public void setDexterity(int newDexterity){this.dexterity=newDexterity;}
+    public void setConstitution(int newConstitution){this.constitution=newConstitution;}
+    public void setIntelligence(int newIntelligence){this.intelligence=newIntelligence;}
+    public void setWisdom(int newWisdom){this.wisdom=newWisdom;}
+    public void setCharisma(int newCharisma){this.charisma=newCharisma;}
+    public void setSpeed(int newSpeed){this.speed=newSpeed;}
+    public void setArmor(int newArmor){this.armor=newArmor;}
+    public void setAlignment(String newAlignment){this.alignment=newAlignment;}
+    public void addLanguage(String newLanguage){
+        int confirm = 0;
+        for(int i = 0; i<languages.length; i++){
+            if(languages[i].isEmpty()){
+                languages[i] = newLanguage;
+                confirm = 1;
+            }
+            else{
+
+            }
+        }
+        if(confirm != 1){
+            throw new IndexOutOfBoundsException("New Language wasn't added to array");
+        }
     }
 
     public String getName(){ return name;}
