@@ -18,23 +18,13 @@ public class Character {
     private ArrayList<String> languages;
     private ArrayList<Action> actions;
 
+    //Constructor
+
     public Character(String name){
         this.name = name;
-
-
-//        this.hitPts=startingHP;
-//        this.strength=initialStrength;
-//        this.dexterity=initialDexterity;
-//        this.constitution=initialConstitution;
-//        this.intelligence=initialIntelligence;
-//        this.wisdom=initialWisdom;
-//        this.charisma=initialCharisma;
-//        this.speed=initialSpeed;
-//        this.armor=initialArmor;
-//        this.alignment=alignment;
-//        this.languages=languages;
-//        this.actions=actions;
     }
+
+    //Validation Methods
 
     private static void checkValid20(int input){
         if(input > 20){
@@ -54,6 +44,8 @@ public class Character {
         else{
             return false; }
     }
+
+    //Set Methods
 
     public void setHP(int startingHP){
         checkValid0(startingHP);
@@ -75,6 +67,8 @@ public class Character {
     public void setAlignment(String newAlignment){this.alignment=newAlignment;}
     public void setLanguages(ArrayList<String> languages){ this.languages=languages;}
     public void setActions(ArrayList<Action> actions){ this.actions=actions;}
+
+    //List add stuff
 
     public void addLanguage(String newLanguage){
         languages.add(newLanguage);
@@ -98,6 +92,8 @@ public class Character {
         }
 
     }
+
+    //Get Methods
 
     public String getName(){ return name;}
     public int getHP(){ return hitPts;}
