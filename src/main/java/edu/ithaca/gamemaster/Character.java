@@ -1,5 +1,6 @@
 package edu.ithaca.gamemaster;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Character {
@@ -14,38 +15,56 @@ public class Character {
     private int speed;
     private String name;
     private String alignment;
-    private String languages[];
-    private Action actions[];
+    private ArrayList<String> languages;
+    private ArrayList<Action> actions;
 
-    public Character(String name,int startingHP,int initialStrength,int initialDexterity,int initialConstitution,int initialIntelligence,
-                     int initialWisdom,int initialCharisma,int initialSpeed,int initialArmor,String alignment,
-                     String languages[], Action actions[]){
+    public Character(String name){
         this.name = name;
-        this.hitPts=startingHP;
-        if(initialStrength > 20 || initialDexterity > 20 || initialConstitution > 20 || initialIntelligence > 20
-                || initialWisdom > 20 || initialCharisma > 20 || initialStrength < 0
-                || initialDexterity < 0 || initialConstitution < 0 || initialIntelligence < 0 || initialWisdom < 0 || initialCharisma < 0
-                || initialSpeed < 0 || initialArmor < 0){
-            throw new IndexOutOfBoundsException("Modifiers can only be less than 20 and greater than 0");
+
+
+//        this.hitPts=startingHP;
+//        this.strength=initialStrength;
+//        this.dexterity=initialDexterity;
+//        this.constitution=initialConstitution;
+//        this.intelligence=initialIntelligence;
+//        this.wisdom=initialWisdom;
+//        this.charisma=initialCharisma;
+//        this.speed=initialSpeed;
+//        this.armor=initialArmor;
+//        this.alignment=alignment;
+//        this.languages=languages;
+//        this.actions=actions;
+    }
+
+    private static void checkValid20(int input){
+        if(input > 20){
+            throw new IndexOutOfBoundsException("Modifiers can only be less than 20");
         }
-        this.strength=initialStrength;
-        this.dexterity=initialDexterity;
-        this.constitution=initialConstitution;
-        this.intelligence=initialIntelligence;
-        this.wisdom=initialWisdom;
-        this.charisma=initialCharisma;
-        this.speed=initialSpeed;
-        this.armor=initialArmor;
-        this.alignment=alignment;
-        this.languages=languages;
-        this.actions=actions;
+    }
+
+    private static void checkValid0(int input){
+        if(input < 0){
+            throw new IllegalArgumentException("Modifiers cannot be less than 0");
+        }
+    }
+
+    private static boolean checkListAdd(ArrayList list,Object item ){
+        if(list.contains(item)){
+            return true; }
+        else{
+            return false; }
     }
 
     public void setHP(int startingHP){
+        checkValid0(startingHP);
         this.hitPts=startingHP;
     }
     public void setName(String newName){this.name=newName;}
-    public void setStrength(int newStrength){this.strength=newStrength;}
+
+    public void setStrength(int newStrength){
+        checkValid20(newStrength);
+        checkValid0(newStrength);
+        this.strength=newStrength;}
     public void setDexterity(int newDexterity){this.dexterity=newDexterity;}
     public void setConstitution(int newConstitution){this.constitution=newConstitution;}
     public void setIntelligence(int newIntelligence){this.intelligence=newIntelligence;}
@@ -54,20 +73,30 @@ public class Character {
     public void setSpeed(int newSpeed){this.speed=newSpeed;}
     public void setArmor(int newArmor){this.armor=newArmor;}
     public void setAlignment(String newAlignment){this.alignment=newAlignment;}
-    public void addLanguage(String newLanguage){
-        int confirm = 0;
-        for(int i = 0; i<languages.length; i++){
-            if(languages[i].isEmpty()){
-                languages[i] = newLanguage;
-                confirm = 1;
-            }
-            else{
+    public void setLanguages(ArrayList<String> languages){ this.languages=languages;}
+    public void setActions(ArrayList<Action> actions){ this.actions=actions;}
 
-            }
+    public void addLanguage(String newLanguage){
+        languages.add(newLanguage);
+        boolean checked = checkListAdd(languages,newLanguage);
+        if(checked){
+            //do nothing
         }
-        if(confirm != 1){
-            throw new IndexOutOfBoundsException("New Language wasn't added to array");
+        else{
+            throw new IndexOutOfBoundsException("Language wasn't added to list");
         }
+    }
+
+    public void addAction(Action newAction){
+        actions.add(newAction);
+        boolean checked = checkListAdd(actions,newAction);
+        if(checked){
+            //do nothing
+        }
+        else{
+            throw new IndexOutOfBoundsException("Action wasn't added to list");
+        }
+
     }
 
     public String getName(){ return name;}
@@ -81,22 +110,19 @@ public class Character {
     public int getSpeed(){ return speed;}
     public int getArmor(){ return armor;}
     public String getAlignment(){ return alignment;}
+
+    //List stuff
+
     public String getLanguages(){
-        StringBuilder languagesAll = new StringBuilder();
-        for(int i=0;i<languages.length;i++){
-            languagesAll.append(languages[i]);
-            languagesAll.append(", ");
-        }
-        String lang = languagesAll.toString();
-        return lang;
+        return languages.toString();
     }
     public String getActions(){
-        StringBuilder actionsAll = new StringBuilder();
-        for(int i=0;i<actions.length;i++){
-            actionsAll.append(actions[i].getName());
-            actionsAll.append(", ");
-        }
-        String act = actionsAll.toString();
-        return act;
+        return actions.toString();
+    }
+    public ArrayList<String> getLanguageList(){
+        return languages;
+    }
+    public ArrayList<Action> getActionsList(){
+        return actions;
     }
 }
