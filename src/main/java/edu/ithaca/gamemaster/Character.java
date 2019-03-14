@@ -28,7 +28,7 @@ public class Character {
 
     private static void checkValid20(int input){
         if(input > 20){
-            throw new IndexOutOfBoundsException("Modifiers can only be less than 20");
+            throw new IllegalArgumentException("Modifiers can only be less than 20");
         }
     }
 
@@ -113,7 +113,12 @@ public class Character {
         return languages.toString();
     }
     public String getActions(){
-        return actions.toString();
+        StringBuilder actOut = new StringBuilder();
+        for(int i = 0; i<actions.size(); i++){
+            actOut.append(actions.get(i).getName() + ", ");
+        }
+        String actionString = actOut.toString();
+        return actionString;
     }
     public ArrayList<String> getLanguageList(){
         return languages;
